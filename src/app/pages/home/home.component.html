@@ -1,0 +1,96 @@
+<header><h2>Generador de personas</h2></header>
+<main>
+  <div class="info-container">
+    <p>
+      ¡Hola! Bienvenido a mi proyecto. Esta idea se me ocurrio a partir de los
+      distintos Character Maker que hay en la Web.
+    </p>
+    <p>
+      Basicamente apretando 'click' en uno de los botones (elegí el genero del
+      personaje que querés generar) generará una persona con datos completamente
+      aleatorios.
+    </p>
+    <p>
+      Puede servirte para darte ideas para una historia, para elegir un nombre
+      para tu hij@ o para lo que necesites
+    </p>
+    <p>
+      Este proyecto no tiene animos de lucro, no guarda información del usuario
+      y no tengo derechos sobre las imagenes utilizadas.
+    </p>
+  </div>
+  <div class="card-container">
+    <ng-container *ngIf="!persona; else personaInfo">
+      <div class="photo-container">
+        <img
+          src="../../../assets/img/people.png"
+          alt="photo"
+          width="140px"
+          height="140px"
+          class="photo"
+        />
+      </div>
+      <div>
+        <div style="margin: 5px">
+          <p>Nombre:</p>
+          <p>Apellido:</p>
+          <p>Nacionalidad:</p>
+          <p>Edad:</p>
+        </div>
+        <div style="margin: 5px">
+          <p>Genero:</p>
+          <p>Altura:</p>
+          <p>Signo zodiacal:</p>
+          <p>Ocupacion:</p>
+          <p>Color Favorito:</p>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #personaInfo>
+      <div class="photo-container">
+        <img
+          [src]="persona.foto"
+          alt="photo"
+          width="140px"
+          height="140px"
+          class="photo"
+        />
+      </div>
+      <div>
+        <div style="margin: 5px">
+          <p>
+            Nombre: <span>{{ this.persona.nombre }}</span>
+          </p>
+          <p>
+            Apellido: <span>{{ this.persona.apellido }}</span>
+          </p>
+          <p>
+            Nacionalidad: <span> {{ this.persona.nacionalidad }}</span>
+          </p>
+          <p>Edad:</p>
+        </div>
+        <div style="margin: 5px">
+          <p>
+            Genero: <span>{{ this.persona.genero }}</span>
+          </p>
+          <p>Altura:</p>
+          <p>
+            Signo zodiacal: <span>{{ this.persona.signozodiacal }}</span>
+          </p>
+          <p>
+            Ocupacion: <span>{{ this.persona.ocupacion }}</span>
+          </p>
+          <p>
+            Color Favorito: <span>{{ this.persona.colorfavorito }}</span>
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div>
+    <button class="button-1" (click)="obtenerHombre()">Hombre</button>
+    <button class="button-2" (click)="obtenerMujer()">Mujer</button>
+  </div>
+</main>
+<footer><p>Autor: Leandro Carlino</p></footer>
