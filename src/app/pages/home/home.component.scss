@@ -1,7 +1,7 @@
 header {
   padding: 2em;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   color: whitesmoke;
 }
 
@@ -11,9 +11,9 @@ main {
 }
 
 footer {
-  padding: 2em;
+  padding: 1.5em;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   color: whitesmoke;
 }
 
@@ -22,7 +22,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 540px;
+  width: 400px;
   border: 1px solid black;
   margin: 2em auto;
   padding: 2em;
@@ -38,6 +38,11 @@ footer {
   width: 140px;
   height: 140px;
   background-color: white;
+}
+
+.info-container {
+  color: whitesmoke;
+  margin-bottom: 3em;
 }
 
 /* CSS */

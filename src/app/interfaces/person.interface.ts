@@ -4,7 +4,7 @@ export interface Persona {
   foto: string;
   genero: string;
   nacionalidad?: string;
-  altura?: number;
+  altura?: string;
   edad?: number;
   signozodiacal?: string;
   ocupacion?: string;

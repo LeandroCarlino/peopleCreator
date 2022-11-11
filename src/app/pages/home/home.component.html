@@ -23,7 +23,7 @@
     <ng-container *ngIf="!persona; else personaInfo">
       <div class="photo-container">
         <img
-          src="../../../assets/img/people.png"
+          src="../../../assets/img/people2.png"
           alt="photo"
           width="140px"
           height="140px"
@@ -36,8 +36,6 @@
           <p>Apellido:</p>
           <p>Nacionalidad:</p>
           <p>Edad:</p>
-        </div>
-        <div style="margin: 5px">
           <p>Genero:</p>
           <p>Altura:</p>
           <p>Signo zodiacal:</p>
@@ -60,29 +58,35 @@
       <div>
         <div style="margin: 5px">
           <p>
-            Nombre: <span>{{ this.persona.nombre }}</span>
+            <strong>Nombre: </strong> <span>{{ this.persona.nombre }}</span>
           </p>
           <p>
-            Apellido: <span>{{ this.persona.apellido }}</span>
+            <strong>Apellido: </strong> <span>{{ this.persona.apellido }}</span>
           </p>
           <p>
-            Nacionalidad: <span> {{ this.persona.nacionalidad }}</span>
-          </p>
-          <p>Edad:</p>
-        </div>
-        <div style="margin: 5px">
-          <p>
-            Genero: <span>{{ this.persona.genero }}</span>
-          </p>
-          <p>Altura:</p>
-          <p>
-            Signo zodiacal: <span>{{ this.persona.signozodiacal }}</span>
+            <strong>Nacionalidad: </strong>
+            <span> {{ this.persona.nacionalidad }}</span>
           </p>
           <p>
-            Ocupacion: <span>{{ this.persona.ocupacion }}</span>
+            <strong>Edad: </strong> <span>{{ this.persona.edad }}</span>
           </p>
           <p>
-            Color Favorito: <span>{{ this.persona.colorfavorito }}</span>
+            <strong>Genero: </strong> <span>{{ this.persona.genero }}</span>
+          </p>
+          <p>
+            <strong>Altura: </strong> <span>{{ this.persona.altura }}</span>
+          </p>
+          <p>
+            <strong>Signo zodiacal: </strong>
+            <span>{{ this.persona.signozodiacal }}</span>
+          </p>
+          <p>
+            <strong>Ocupacion: </strong>
+            <span>{{ this.persona.ocupacion }}</span>
+          </p>
+          <p>
+            <strong>Color Favorito: </strong>
+            <span>{{ this.persona.colorfavorito }}</span>
           </p>
         </div>
       </div>

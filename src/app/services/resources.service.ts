@@ -24,6 +24,24 @@ export class ResourcesService {
     'Marisol',
     'Carolina',
     'Veronica',
+    'Ana',
+    'Valeria',
+    'Candela',
+    'Valentina',
+    'Lucía',
+    'Paula',
+    'Daniela',
+    'Alejandra',
+    'Isabella',
+    'Romina',
+    'Emma',
+    'Martina',
+    'Sara',
+    'Camila',
+    'Antonella',
+    'Amelia',
+    'Clara',
+    'Rosa',
   ];
 
   nombreHombre: string[] = [
@@ -39,6 +57,7 @@ export class ResourcesService {
     'Alan',
     'Franco',
     'Nahuel',
+    'Dante',
     'Heber',
     'Alex',
     'Diego',
@@ -47,12 +66,27 @@ export class ResourcesService {
     'Enzo',
     'Cristian',
     'Rodrigo',
+    'Aarón',
+    'Elián',
+    'Ignacio',
+    'Pablo',
+    'Ricardo',
+    'Roberto',
+    'Mateo',
+    'Alejandro',
+    'Diego',
+    'Daniel',
+    'Lucas',
+    'Gabriel',
+    'Adrian',
+    'Lorenzo',
   ];
 
   apellido: string[] = [
     'Garcia',
     'Araoz',
     'Valenzuela',
+    'Andrada',
     'Perez',
     'Gomez',
     'Medina',
@@ -90,6 +124,31 @@ export class ResourcesService {
     'Coronel',
     'Martinez',
     'Sánchez',
+    'Sosa',
+    'Silva',
+    'Russo',
+    'Esposito',
+    'Acosta',
+    'Lombardi',
+    'Moretti',
+    'Caruso',
+    'Barbieri',
+    'Romano',
+    'Simone',
+    'Salvatore',
+    'Santoro',
+    'Aranda',
+    'Brito',
+    'Rios',
+    'Juarez',
+    'Chavez',
+    'Moya',
+    'Guerra',
+    'Argañaraz',
+    'Monteros',
+    'Castañares',
+    'Delgado',
+    'Valdez',
   ];
 
   nacionalidad: string[] = [
@@ -159,7 +218,7 @@ export class ResourcesService {
   constructor() {}
 
   obtenerMujer(): Persona {
-    const photoNum = Math.floor(Math.random() * 9) + 1;
+    const photoNum = Math.floor(Math.random() * 20) + 1;
 
     const nombre =
       this.nombreMujer[Math.floor(Math.random() * this.nombreMujer.length)];
@@ -179,14 +238,21 @@ export class ResourcesService {
     const colorfavorito =
       this.colorfavorito[Math.floor(Math.random() * this.colorfavorito.length)];
 
+    const edad = Math.floor(Math.random() * 16) + 20;
+
+    const altura = (Math.floor(Math.random() * 28) + 148).toString();
+
+    const alturaFormateada =
+      altura.charAt(0) + '.' + altura.charAt(1) + altura.charAt(2);
+
     this.persona = {
       nombre: nombre,
       apellido: apellido,
       foto: `../../../assets/img/woman${photoNum}.png`,
       genero: 'Mujer',
       nacionalidad: nacionalidad,
-      altura: 1,
-      edad: 1,
+      altura: alturaFormateada,
+      edad: edad,
       signozodiacal: signozodiacal,
       ocupacion: ocupacion,
       colorfavorito: colorfavorito,
@@ -196,7 +262,7 @@ export class ResourcesService {
   }
 
   obtenerHombre(): Persona {
-    const photoNum = Math.floor(Math.random() * 9) + 1;
+    const photoNum = Math.floor(Math.random() * 21) + 1;
 
     const nombre =
       this.nombreHombre[Math.floor(Math.random() * this.nombreHombre.length)];
@@ -216,14 +282,21 @@ export class ResourcesService {
     const colorfavorito =
       this.colorfavorito[Math.floor(Math.random() * this.colorfavorito.length)];
 
+    const edad = Math.floor(Math.random() * 16) + 20;
+
+    const altura = (Math.floor(Math.random() * 30) + 160).toString();
+
+    const alturaFormateada =
+      altura.charAt(0) + '.' + altura.charAt(1) + altura.charAt(2);
+
     this.persona = {
       nombre: nombre,
       apellido: apellido,
       foto: `../../../assets/img/man${photoNum}.png`,
       genero: 'Hombre',
       nacionalidad: nacionalidad,
-      altura: 1,
-      edad: 1,
+      altura: alturaFormateada,
+      edad: edad,
       signozodiacal: signozodiacal,
       ocupacion: ocupacion,
       colorfavorito: colorfavorito,
