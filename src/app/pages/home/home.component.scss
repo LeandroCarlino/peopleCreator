@@ -6,8 +6,11 @@ header {
 }
 
 main {
-  padding: 4em 2em;
+  margin: 4em 16em;
   text-align: center;
+  background-color: #00000085;
+  padding: 4em 1em;
+  border-radius: 10px;
 }
 
 footer {
@@ -43,6 +46,9 @@ footer {
 .info-container {
   color: whitesmoke;
   margin-bottom: 3em;
+  p {
+    text-shadow: 1px 1px 2px black;
+  }
 }
 
 /* CSS */
@@ -119,8 +125,18 @@ footer {
   outline: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
+  main {
+    margin: 4em;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    margin: 4em 0em;
+  }
+
   .card-container {
-    width: 76%;
+    width: 80%;
   }
 }
